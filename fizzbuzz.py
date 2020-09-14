@@ -1,9 +1,10 @@
 def fizzbuzz(start, end):
-    evendived = lambda x, n: x % n == 0
+    def evendiv(x, n): return x % n == 0
+
     lines = []
     for i in range(start, end + 1):
-        fizz = evendived(i, 3)
-        buzz = evendived(i, 5)
+        fizz = evendiv(i, 3)
+        buzz = evendiv(i, 5)
         tot_string = ""
         if fizz:
             tot_string += "fizz"
