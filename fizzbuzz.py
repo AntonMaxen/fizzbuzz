@@ -2,14 +2,14 @@ def evendiv(x, n):
     return x % n == 0
 
 
-def fizzbuzz(start, end):
+def fizzbuzz(start, end, fizzdiv=3, buzzdiv=5, ultimate=42):
     lines = []
     for i in range(start, end + 1):
-        fizz = evendiv(i, 3)
-        buzz = evendiv(i, 5)
+        fizz = evendiv(i, fizzdiv)
+        buzz = evendiv(i, buzzdiv)
         tot_string = ""
 
-        if i == 42:
+        if i == ultimate:
             tot_string += "Answer to the Ultimate Question of Life, the Universe, and Everything"
         else:
             if fizz:
